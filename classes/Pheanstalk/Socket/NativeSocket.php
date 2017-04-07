@@ -36,7 +36,7 @@ class Pheanstalk_Socket_NativeSocket implements Pheanstalk_Socket
         }
 
         $this->_wrapper()
-            ->stream_set_timeout($this->_socket, self::SOCKET_TIMEOUT);
+            ->stream_set_timeout($this->_socket, $connectTimeout ?: self::SOCKET_TIMEOUT);
     }
 
     /* (non-phpdoc)
